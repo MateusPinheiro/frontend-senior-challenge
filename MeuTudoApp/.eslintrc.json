@@ -1,0 +1,102 @@
+{
+	"env": {
+		"amd": true,
+		"jquery": true,
+		"es6": true
+	},
+	"globals": {
+		"console": true,
+		"document": true,
+		"window": true,
+		"location": true,
+		"expect": true,
+		"describe": true,
+		"it": true,
+		"test": true,
+		"module": true,
+		"localStorage": true,
+		"jest": true,
+		"setTimeout": true,
+		"beforeEach": true,
+		"afterEach": true,
+		"beforeAll": true,
+		"afterAll": true,
+		"FileReader": true,
+		"navigator": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"parser": "babel-eslint",
+	"rules": {
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+		"no-undef": "warn",
+		"no-unreachable": "warn",
+		"no-unused-vars": "off",
+		"constructor-super": "warn",
+		"valid-typeof": "warn",
+		"space-before-blocks": "error",
+		"space-infix-ops": "error",
+		"comma-spacing": "error",
+		"key-spacing": "error",
+		"object-curly-spacing": [
+			"error",
+			"always"
+		],
+		"space-before-function-paren": [
+			"error",
+			{
+				"anonymous": "always",
+				"named": "never"
+			}
+		],
+		"keyword-spacing": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"semi": [
+			"error",
+			"never"
+		],
+		"brace-style": [
+			"error",
+			"1tbs",
+			{
+				"allowSingleLine": true
+			}
+		],
+		"func-style": [
+			"error",
+			"declaration",
+			{
+				"allowArrowFunctions": true
+			}
+		],
+		"no-sparse-arrays": "error",
+		"eqeqeq": [
+			"warn",
+			"smart"
+		],
+		"no-else-return": "warn",
+		"indent": [
+			"error",
+			2,
+			{
+				"SwitchCase": 1,
+				"ignoredNodes": [
+					"TemplateLiteral"
+				]
+			}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"avoidEscape": true
+			}
+		]
+	}
+}

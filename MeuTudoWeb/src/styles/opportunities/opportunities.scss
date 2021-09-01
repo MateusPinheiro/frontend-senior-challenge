@@ -1,0 +1,252 @@
+.opportunities {
+  width: 100%;
+  height: calc(100% - 60px);
+
+  .home,
+  .selection,
+  .simulation {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .home {
+    .info {
+      padding: 35px 50px 20px 50px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .title {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+
+      .value {
+        font-size: 30px;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+
+    .available-loans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+
+      .card {
+        @include card;
+        height: 126px;
+        width: 224px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        justify-content: center;
+
+        &__deactivated {
+          .image {
+            opacity: 0.2;
+          }
+
+          .title {
+            opacity: 0.2;
+          }
+        }
+
+        .image {
+          width: 54px;
+          height: 54px;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
+
+        .value {
+          font-size: 12px;
+          color: $primary-color;
+        }
+
+        .confirm-button {
+          font-size: 14px;
+          color: $primary-color;
+          align-self: end;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .selection {
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 35px;
+      margin-bottom: 25px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      color: $primary-color;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+
+      .card {
+        @include card;
+        height: 22px;
+        width: 224px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+
+        &__selected {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+
+    }
+
+    .simulation-card {
+      @include card;
+      width: 400px;
+      height: 250px;
+      border-left: 5px solid $primary-color;
+      padding: 10px 20px;
+
+      &__top {
+        display: flex;
+        border-bottom: 0.5px solid #bfbfbf;
+        height: 60%;
+        width: 100%;
+        display: flex;
+
+        &-left {
+          display: flex;
+          width: 70%;
+          margin: 15px 0 35px 0;
+          border-right: 0.5px solid #bfbfbf;
+          align-items: center;
+
+          .logo {
+            height: 80px;
+            width: 80px;
+            border: 1px solid #c2c2c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+
+            .title {
+              margin: 0;
+            }
+
+            .subtitle {
+              color: black;
+              text-decoration: none;
+              font-weight: normal;
+            }
+
+            .value {
+              font-size: 24px;
+              font-weight: bold;
+              color: $primary-color;
+            }
+          }
+        }
+
+        &-right {
+          display: flex;
+          width: 30%;
+          margin: 15px 0 35px 20px;
+          justify-content: center;
+          flex-direction: column;
+
+          span:last-child {
+            font-weight: bold;
+          }
+        }
+      }
+
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40%;
+
+        span {
+          font-size: 14px;
+
+          .far {
+            color: $primary-color;
+          }
+        }
+
+        span:nth-child(2) {
+          font-weight: bold;
+        }
+
+        .confirm-button {
+          align-self: flex-end;
+        }
+      }
+    }
+
+    .confirm-button {
+      font-size: 16px;
+      color: $primary-color;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .input-value {
+      width: 100px;
+    }
+  }
+
+  .input-value {
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #b2b2b2;
+  }
+}

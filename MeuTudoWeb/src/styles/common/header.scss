@@ -1,0 +1,77 @@
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      color: white;
+      text-decoration-line: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .logo-image {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .top-menu {
+    &__item {
+      cursor: pointer;
+      margin: 0 10px;
+
+      .fa-sort-down {
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
+
+      .fa-sort-up {
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      &-selected {
+        color: $primary-color;
+      }
+    }
+
+    &__account-options {
+      @include card;
+      position: absolute;
+      right: 10px;
+      top: 45px;
+      padding: 5px;
+
+      .option-item {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin: 0 10px;
+        padding: 0 10px;
+      }
+      
+      & .option-item:not(:last-child) {
+        border-bottom: 1px solid lightgrey;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: inherit;
+        color: black;
+      }
+    }
+  }
+}
